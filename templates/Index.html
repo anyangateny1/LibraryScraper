@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LibCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/stylesheet.css') }}">
+</head>
+
+<body>
+    <div id="title">
+    <h1>LibCheck - A tool that scourers the internet for the pesky books you can't find!</h1>
+    </div>
+
+    <div id="info">
+    <p>Please enter the title of the book. Please ensure that the input matches the book title.</p>
+    </div>
+
+    <p>This tool works by automating the search of books on the Playford Library Website. 
+        If the book is exists in the Playford Library Network, 
+        the status and location of the book will be returned.</p>
+
+    <div id="searchBox">
+    <form action="/search" method="POST">
+            <input type="text" name="query">
+            <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
