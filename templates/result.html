@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/results.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Result</h1>
+        {% if result.error %}
+            <p class="error">{{ result.error }}</p>
+        {% else %}
+            <div class="result">
+                <p><strong>Title:</strong> {{ result.title }}</p>
+                <p><strong>Location:</strong> {{ result.location }}</p>
+                <p><strong>Status:</strong> {{ result.status }}</p>
+            </div>
+        {% endif %}
+        <a href="/" class="back-button">Go back</a>
+    </div>
+</body>
+</html>
